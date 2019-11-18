@@ -8,7 +8,7 @@
 #ifndef MY_H_
 #define MY_H_
 
-#include <maths.h>
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
