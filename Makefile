@@ -37,4 +37,4 @@ fclean	:	clean
 
 re	:	fclean all
 
-.PHONY	:	all build TU clean fclean re
+.PHONY	:	all TU clean fclean re
