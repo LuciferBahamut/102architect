@@ -7,7 +7,8 @@
 
 NAME	=	102architect
 
-SRC	=
+SRC	=	src/main.c \
+		src/display_help.c
 
 CC	=	gcc
 
