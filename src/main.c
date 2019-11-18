@@ -7,6 +7,21 @@
 
 #include "my.h"
 
+float **matrix_create(char c, float i, float j)
+{
+    float r[3][3];
+    switch (c) {
+        case 't' : r = {{1, 0, i}, {0, 1, j}, {0, 0, 1}};
+            break;
+        case 'z' : r = {{i, 0, 0}, {0, j, 0}, {0, 0, 1}};
+            break;
+        case 'r' : //r = {{, , 0}, {, , 0}, {0, 0, 1}};
+            break;
+        case 's' : //r = {{, , 0}, {, , 0}, {0, 0, 1}};
+    }
+    return (r);
+}
+
 int main(int ac, char **av)
 {
     if (error_handling(ac, av) == 84)
