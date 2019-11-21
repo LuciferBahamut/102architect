@@ -7,13 +7,21 @@
 
 #include "my.h"
 
+float **calc_multi(float **f, float **m, int i, int j)
+{
+    float **r = create_matrix_e();
+    
+    r[i][j] = (f[i][0] * m[0][j]) + (f[i][1] * m[1][j]) + (f[i][2] * m[2][j]);
+    return (r);
+}
+
 float **mult_architech(float **f, float **m)
 {
-    float r[3][3] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
-    
+    float **r = create_matrix_e();
+
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
-            r[i][j] = (f[i][0] * m[0][j]) + (f[i][1] * m[1][j]) + (f[i][2] * m[2][j]);
+            r = calc_multi(f, m, i, j);
         }
     }
     return (r);

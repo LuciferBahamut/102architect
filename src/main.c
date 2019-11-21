@@ -9,31 +9,33 @@
 
 float **matrix_create(char **str, int i)
 {
-    float r[3][3];
+    float **r = malloc((3 + 1) * sizeof (float *));
     float a;
     float b;
 
+    *r = malloc(3 + 1);
     if (str[i][0] == '-' && str[i][1] == 't') {
         a = atof(str[i + 1]);
         b = atof(str[i + 2]);
         printf("Tranlation along vector (%d, %d)\n", a, b);
-        r = {{1, 0, a}, {0, 1, b}, {0, 0, 1}};
+        matrixgest(r, a, b, 1);
     }
     if (str[i][0] == '-' && str[i][1] == 'z') {
         a = atof(str[i + 1]);
         b = atof(str[i + 2]);
         printf("Scaling by factor %a and %b\n", a, b);
-        r = {{a, 0, 0}, {0, b, 0}, {0, 0, 1}};
+        matrixgest(r, a, b, 2);
     }
     if (str[i][0] == '-' && str[i][1] == 'r') {
         a = atof(str[i + 1]);
         printf("Rotation by a %a degree angle\n", a);
-        r = {{cos(a), -sin(a), 0}, {sin(a), cos(a), 0}, {0, 0, 1}};
+        matrixgest(r, a, b, 3);
     }
     if (str[i][0] == '-' && str[i][1] == 's') {
         a = atof(str[i + 1]);
-        printf("Reflection over an axis with an inclinaison angle of %d degrees\n", a);
-        r = {{cos(2 * a), sin(2 * a), 0}, {sin(2 * a), -cos(2 * a), 0}, {0, 0, 1}};
+        printf("Reflection over an axis with an"); 
+        printf("inclinaison angle of %d degrees\n", a);
+        matrixgest(r, a, b, 4);
     }
     return (r);
 }
@@ -53,7 +55,8 @@ void matrix_calc(char **str , int size)
     float **s;
 
     for (int i = 3; i < size; i++) {
-        if (str[i][0] == '-' && (str[i][1] == 't' || str[i][1] == 'z' || str[i][1] == 'r' || str[i][1] == 's')) {
+        if (str[i][0] == '-' && (str[i][1] == 't' || str[i][1] == 'z'
+                                 || str[i][1] == 'r' || str[i][1] == 's')) {
             s = matrix_create(str, i);
             r = mult_architech(r, s);
         }
@@ -65,8 +68,8 @@ void matrix_calc(char **str , int size)
 
 int main(int ac, char **av)
 {
-    if (error_handling(ac, av) == 84)
-        return (84);
+//    if (error_handling(ac, av) == 84)
+//        return (84);
     if (av[1][0] == '-' && av[1][1] == 'h') {
         display_help();
         return (0);

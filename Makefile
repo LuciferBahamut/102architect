@@ -8,11 +8,15 @@
 NAME	=	102architect
 
 SRC	=	src/main.c \
-		src/display_help.c
+		src/display_help.c \
+		src/architect.c \
+		src/create_matrix.c \
+		src/create_matrix_empty.c \
+		src/error_handling.c
 
 CC	=	gcc
 
-DEFLAGS	=	-W -Wextra -Wall -g3
+DEFLAGS	=	-W -Wextra -Wall -g3 -lm
 
 CPPFLAGS	=	-I./include/
 
