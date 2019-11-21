@@ -9,32 +9,34 @@
 
 float **matrix_create(char **str, int i)
 {
-    float **r = malloc((3 + 1) * sizeof (float *));
-    float a;
-    float b;
+    float **r = malloc(3 * sizeof (float *));
+    float a = atof(str[0]);
+    float b = atof(str[1]);
 
-    *r = malloc(3 + 1);
+    r[0] = malloc(3);
+    r[1] = malloc(3);
+    r[2] = malloc(3);
     if (str[i][0] == '-' && str[i][1] == 't') {
         a = atof(str[i + 1]);
         b = atof(str[i + 2]);
-        printf("Tranlation along vector (%d, %d)\n", a, b);
+        printf("Tranlation along vector (%.0f, %.0f)\n", a, b);
         matrixgest(r, a, b, 1);
     }
     if (str[i][0] == '-' && str[i][1] == 'z') {
         a = atof(str[i + 1]);
         b = atof(str[i + 2]);
-        printf("Scaling by factor %a and %b\n", a, b);
+        printf("Scaling by factor %.0f and %.0f\n", a, b);
         matrixgest(r, a, b, 2);
     }
     if (str[i][0] == '-' && str[i][1] == 'r') {
         a = atof(str[i + 1]);
-        printf("Rotation by a %a degree angle\n", a);
+        printf("Rotation by a %.0f degree angle\n", a);
         matrixgest(r, a, b, 3);
     }
     if (str[i][0] == '-' && str[i][1] == 's') {
         a = atof(str[i + 1]);
         printf("Reflection over an axis with an"); 
-        printf("inclinaison angle of %d degrees\n", a);
+        printf("inclinaison angle of %.0f degrees\n", a);
         matrixgest(r, a, b, 4);
     }
     return (r);
@@ -42,9 +44,9 @@ float **matrix_create(char **str, int i)
 
 void print_matrixresult(float **r)
 {
-    printf("%2f\t%2f\t%2f\n", r[0][0], r[0][1], r[0][2]);
-    printf("%2f\t%2f\t%2f\n", r[1][0], r[1][1], r[1][2]);
-    printf("%2f\t%2f\t%2f\n", r[2][0], r[2][0], r[2][2]);
+    printf("%.2f\t%.2f\t%.2f\n", r[0][0], r[0][1], r[0][2]);
+    printf("%.2f\t%.2f\t%.2f\n", r[1][0], r[1][1], r[1][2]);
+    printf("%.2f\t%.2f\t%.2f\n", r[2][0], r[2][0], r[2][2]);
 }
 
 void matrix_calc(char **str , int size)

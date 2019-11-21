@@ -37,11 +37,11 @@ float **matrixflagz(float **r, float a, float b)
 
 float **matrixflagr(float **r, float a)
 {
-    r[0][0] = cos(a);
-    r[0][1] = -sin(a);
+    r[0][0] = cos(a) * (180 / 3.1415926);
+    r[0][1] = -sin(a) * (180 / 3.1415926);
     r[0][2] = 0;
-    r[1][0] = sin(a);
-    r[1][1] = cos(a);
+    r[1][0] = sin(a) * (180 / 3.1415926);
+    r[1][1] = cos(a) * (180 / 3.1415926);
     r[1][2] = 0;
     r[2][0] = 0;
     r[2][1] = 0;
@@ -51,11 +51,11 @@ float **matrixflagr(float **r, float a)
 
 float **matrixflags(float **r, float a)
 {
-    r[0][0] = cos(2 * a);
-    r[0][1] = sin(2 * a);
+    r[0][0] = cos(2 * a) * (180 / 3.1415926);
+    r[0][1] = sin(2 * a) * (180 / 3.1415926);
     r[0][2] = 0;
-    r[1][0] = sin(2 * a);
-    r[1][1] = -cos(2 * a);
+    r[1][0] = sin(2 * a) * (180 / 3.1415926);
+    r[1][1] = -cos(2 * a) * (180 / 3.1415926);
     r[1][2] = 0;
     r[2][0] = 0;
     r[2][1] = 0;

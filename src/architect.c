@@ -33,5 +33,5 @@ void final_architech(float **f, float a, float b)
 
     r[0] = (f[0][0] * a) + (f[0][1] * b) + (f[0][2] * 1);
     r[1] = (f[1][0] * a) + (f[1][1] * b) + (f[1][2] * 1);
-    printf("(%2f, %2f) => (%2f, %2f)\n", a, b, r[0], r[1]);
+    printf("(%.2f, %.2f) => (%.2f, %.2f)\n", a, b, r[0], r[1]);
 }

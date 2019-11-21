@@ -38,7 +38,7 @@ int error_handling(int ac, char **av)
 {
     if (ac == 3 || ac == 0)
         return (84);
-    for (int i = 0; av[i] != '\0'; i++) {
+    for (int i = 0; av[i]; i++) {
         if (i == 1 || 2)
             check_if_number(av, i);
         if (i < 2)
