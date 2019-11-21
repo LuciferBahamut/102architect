@@ -8,6 +8,8 @@
 int check_if_number(char **av, int i)
 {
     for (int j = 0; av[i][j] != '\0'; j++) {
+        if (av[i][j] == '-')
+            i++;
         if (av[i][j] < '0' || av[i][j] > '9')
             return (84);
     }
