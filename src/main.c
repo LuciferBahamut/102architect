@@ -19,25 +19,25 @@ float **matrix_create(char **str, int i)
     if (str[i][0] == '-' && str[i][1] == 't') {
         a = atof(str[i + 1]);
         b = atof(str[i + 2]);
-        printf("Tranlation along vector (%.0f, %.0f)\n", a, b);
-        matrixgest(r, a, b, 1);
+        printf("Translation along vector (%.0f, %.0f)\n", a, b);
+        r = matrixgest(r, a, b, 1);
     }
     if (str[i][0] == '-' && str[i][1] == 'z') {
         a = atof(str[i + 1]);
         b = atof(str[i + 2]);
         printf("Scaling by factor %.0f and %.0f\n", a, b);
-        matrixgest(r, a, b, 2);
+        r = matrixgest(r, a, b, 2);
     }
     if (str[i][0] == '-' && str[i][1] == 'r') {
         a = atof(str[i + 1]);
         printf("Rotation by a %.0f degree angle\n", a);
-        matrixgest(r, a, b, 3);
+        r = matrixgest(r, a, b, 3);
     }
     if (str[i][0] == '-' && str[i][1] == 's') {
         a = atof(str[i + 1]);
         printf("Reflection over an axis with an"); 
         printf("inclinaison angle of %.0f degrees\n", a);
-        matrixgest(r, a, b, 4);
+        r = matrixgest(r, a, b, 4);
     }
     return (r);
 }
@@ -77,6 +77,6 @@ int main(int ac, char **av)
         return (0);
     }
     av++;
-    matrix_calc(av, ac);
+    matrix_calc(av, ac - 1);
     return (0);
 }
