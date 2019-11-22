@@ -10,35 +10,24 @@
 float **matrix_create(char **str, int i)
 {
     float **r = malloc(3 * sizeof (float *));
-    float a = atof(str[0]);
-    float b = atof(str[1]);
+    float a = atof(str[i + 1]);
+    float b = 0;
 
     r[0] = malloc(3);
     r[1] = malloc(3);
     r[2] = malloc(3);
     if (str[i][0] == '-' && str[i][1] == 't') {
-        a = atof(str[i + 1]);
         b = atof(str[i + 2]);
-        printf("Translation along vector (%.0f, %.0f)\n", a, b);
         r = matrixgest(r, a, b, 1);
     }
     if (str[i][0] == '-' && str[i][1] == 'z') {
-        a = atof(str[i + 1]);
         b = atof(str[i + 2]);
-        printf("Scaling by factor %.0f and %.0f\n", a, b);
         r = matrixgest(r, a, b, 2);
     }
-    if (str[i][0] == '-' && str[i][1] == 'r') {
-        a = atof(str[i + 1]);
-        printf("Rotation by a %.0f degree angle\n", a);
+    if (str[i][0] == '-' && str[i][1] == 'r')
         r = matrixgest(r, a, b, 3);
-    }
-    if (str[i][0] == '-' && str[i][1] == 's') {
-        a = atof(str[i + 1]);
-        printf("Reflection over an axis with an"); 
-        printf("inclinaison angle of %.0f degrees\n", a);
+    if (str[i][0] == '-' && str[i][1] == 's')
         r = matrixgest(r, a, b, 4);
-    }
     return (r);
 }
 
@@ -53,17 +42,17 @@ void matrix_calc(char **str , int size)
 {
     float a = atof(str[0]);
     float b = atof(str[1]);
-    float **r = matrix_create(str, 2);
+    float **r = create_matrix_e();
     float **s;
 
-    for (int i = 3; i < size; i++) {
+    for (int i = size - 1; i >= 2; i--) {
         if (str[i][0] == '-' && (str[i][1] == 't' || str[i][1] == 'z'
-                                 || str[i][1] == 'r' || str[i][1] == 's')) {
+                                || str[i][1] == 'r' || str[i][1] == 's')) {
             s = matrix_create(str, i);
             r = mult_architech(r, s);
         }
-        i++;
     }
+    print_matrix_steps(str, size);
     print_matrixresult(r);
     final_architech(r, a, b);
 }

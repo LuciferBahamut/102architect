@@ -19,5 +19,6 @@ void final_architech(float **f, float a, float b);
 float **mult_architech(float **f, float **m);
 float **matrixgest(float **r, float a, float b, int f);
 float **create_matrix_e(void);
+void print_matrix_steps(char **str, int size);
 
 #endif
