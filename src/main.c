@@ -59,13 +59,13 @@ void matrix_calc(char **str , int size)
 
 int main(int ac, char **av)
 {
-//    if (error_handling(ac, av) == 84)
-//        return (84);
-    if (av[1][0] == '-' && av[1][1] == 'h') {
+    av++;
+    if (error_handling(ac, av) == 1)
+        return (84);
+    if (av[0][0] == '-' && av[0][1] == 'h') {
         display_help();
         return (0);
     }
-    av++;
     matrix_calc(av, ac - 1);
     return (0);
 }
