@@ -45,6 +45,7 @@ void matrix_calc(char **str , int size)
     float **r = create_matrix_e();
     float **s;
 
+
     for (int i = size - 1; i >= 2; i--) {
         if (str[i][0] == '-' && (str[i][1] == 't' || str[i][1] == 'z'
                                 || str[i][1] == 'r' || str[i][1] == 's')) {
@@ -59,6 +60,8 @@ void matrix_calc(char **str , int size)
 
 int main(int ac, char **av)
 {
+    if (ac == 1)
+        return (84);
     av++;
     if (error_handling(ac, av) == 1)
         return (84);

@@ -34,7 +34,9 @@ int check_arg1_after_flag(char **av, int i)
 
 int error_handling(int ac, char **av)
 {
-    if (ac == 3 || ac == 0)
+    if (av[0][0] == '-' && av[0][1] == 'h')
+        return (0);
+    if (ac <= 3)
         return (1);
     for (int i = 0; i < ac - 1; i++) {
         if ((i == 0 || i == 1) && check_if_number(av, i) == 1)
