@@ -17,4 +17,4 @@ Result  : 97,8 %
   
 Beware of -42 for Epitech students !
 
-[GROUP] Made with Guerlain Blanchard
+[Group] Made with Guerlain Blanchard
