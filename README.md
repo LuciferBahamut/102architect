@@ -1,20 +1,16 @@
-# 102architect
-{EPITECH} -- First year -- second maths project
+<h1>102architect</h1>
+<h3>{EPITECH} -- First year -- second maths project</h3>
 
-1st semester Maths unit : Grade A
+<p>1st semester Maths unit : Grade A</p>
 
-102architect_2019 -- Without Crash
+<p>102architect_2019 -- Without Crash</p>
 
-Result  : 97,8 %
+<p>Result  : 97,8 %</p>
+  <li>Rigor : 100 % -- 22 / 22</li>
+  <li>Transformation matrices : 100 % -- 12 / 12</li>
+  <li>Matrix Product : 100 % -- 6 / 6</li>
+  <li>Complex transformations : 83,3 % -- 5 / 6</li>
+<p></p>
+<p>Beware of -42 for Epitech students !</p>
 
-  - Rigor : 100 % -- 22 / 22
-  
-  - Transformation matrices : 100 % -- 12 / 12
-  
-  - Matrix Product : 100 % -- 6 / 6
-  
-  - Complex transformations : 83,3 % -- 5 / 6
-  
-Beware of -42 for Epitech students !
-
-[Group] Made with Guerlain Blanchard
+<p>[Group] Made with Guerlain Blanchard</p>
