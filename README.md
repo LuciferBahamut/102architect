@@ -1,5 +1,5 @@
 <h1>102architect</h1>
-<h3>{EPITECH} -- First year -- second maths project</h3>
+<h3>{EPITECH} -- First year -- Semester 1 -- second maths project</h3>
 
 <p>1st semester Maths unit : Grade A</p>
 
