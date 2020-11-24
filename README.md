@@ -3,7 +3,7 @@
 
 <p>1st semester Maths unit : Grade A</p>
 
-<p>102architect_2019 -- Without Crash</p>
+<p>102architect -- Without Crash</p>
 
 <p>Result  : 97,8 %</p>
   <li>Rigor : 100 % -- 22 / 22</li>
