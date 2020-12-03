@@ -9,7 +9,7 @@
 | Transformation matrices |    100 %   |     12 / 12     |    x    |
 |      Matrix Product     |    100 %   |      6 / 6      |    x    |
 | Complex transformations |   83,3 %   |      5 / 6      |    x    |
-|         Results         |   97,8 %   |     45 / 46     |    x    |
+|         **Results**         |   **97,8 %**   |     45 / 46     |    x    |
 
 Beware of -42 for Epitech students !
 
