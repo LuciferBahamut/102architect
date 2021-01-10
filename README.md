@@ -13,4 +13,4 @@
 
 Beware of -42 for Epitech students !
 
-[Group] Made with Guerlain Blanchard
+[Group] Made with Guerlain Blanchard [son GitHub](https://github.com/guerlBlanchard)
